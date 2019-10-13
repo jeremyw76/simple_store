@@ -3,13 +3,13 @@
 <table>
   <thead>
     <tr>
-      <th>Product</th><th>Description</th><th>Price</th><th>Stock qty</th>
+      <th>Product</th><th>Description</th><th>Price</th><th>Stock qty</th><th>Category</th>
     </tr>
   </thead>
   <tbody>
     <% @products.each do |p| %>
       <tr>
-        <td><%= p.title %></td><td><%= p.description %></td><td><%= "$#{'%.2f' % p.price}" %></td><td><%= p.stock_quantity %></td>
+        <td><%= p.title %></td><td><%= p.description %></td><td><%= "$#{'%.2f' % p.price}" %></td><td><%= p.stock_quantity %></td><td><%= p.category.name %></td>
       </tr>
     <% end %>
   </tbody>
